@@ -5,15 +5,14 @@ strategy:
     maxUnavailable: 1
 image:
   image_registry: acrargopogwizdow.azurecr.io/
-  image_repository: r1.nginx
-  environment: preprod-
+  image_repository: r2.nginx
+  environment: dev-
   version_major: '1'
-  version_minor: '0'
-  version_patch: '0'
+  version_minor: '1'
+  version_patch: 0cc3580
   pullPolicy: Always
-
 serviceAccount:
-  name: r1-nginx
+  name: r2-nginx
 labels:
   tier: front
 service:

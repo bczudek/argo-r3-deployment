@@ -6,12 +6,11 @@ strategy:
 image:
   image_registry: acrargopogwizdow.azurecr.io/
   image_repository: r1.nginx
-  environment: preprod-
+  environment: dev-
   version_major: '1'
-  version_minor: '0'
-  version_patch: '0'
+  version_minor: '10'
+  version_patch: 24393b5
   pullPolicy: Always
-
 serviceAccount:
   name: r1-nginx
 labels:
