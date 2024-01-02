@@ -9,7 +9,7 @@ image:
   environment: dev-
   version_major: '1'
   version_minor: '14'
-  version_patch: 8a2105e
+  version_patch: 41b99dd
   pullPolicy: Always
 serviceAccount:
   name: r1-nginx
