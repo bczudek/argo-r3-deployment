@@ -8,8 +8,8 @@ image:
   image_repository: r1.nginx
   environment: preprod-
   version_major: '1'
-  version_minor: '15'
-  version_patch: 55cd754
+  version_minor: '16'
+  version_patch: 29024df
   pullPolicy: Always
 serviceAccount:
   name: r1-nginx
