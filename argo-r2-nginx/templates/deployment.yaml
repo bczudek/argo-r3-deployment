@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "r2-nginx.fullname" . }}
+  labels:
+    {{- include "r2-nginx.labels" . | nindent 4 }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  selector:
+    matchLabels:
+      {{- include "r2-nginx.selectorLabels" . | nindent 6 }}
+  strategy:
+    type: {{ .Values.strategy.type }}
+    rollingUpdate:
+      maxSurge: {{ .Values.strategy.rollingUpdate.maxSurge }}
+      maxUnavailable: {{ .Values.strategy.rollingUpdate.maxUnavailable }}
+  template:
+    metadata:
+      labels:
+        {{- include "r2-nginx.labels" . | nindent 8 }}
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.image_registry }}/{{ .Values.image.image_repository }}:{{ .Values.image.environment }}{{ .Values.image.version_major }}.{{ .Values.image.version_minor }}.{{ .Values.image.version_patch }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.targetPort }}
+              protocol: TCP
+      {{- if .Values.serviceAccount }}
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      {{- end }}
+      terminationGracePeriodSeconds: 60
+      
