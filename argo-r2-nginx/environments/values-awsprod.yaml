@@ -1,0 +1,22 @@
+strategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxSurge: 3
+    maxUnavailable: 1
+image:
+  image_registry: acrargopogwizdow.azurecr.io/
+  image_repository: r2.nginx
+  environment: prod-
+  version_major: '1'
+  version_minor: '0'
+  version_patch: '0'
+  pullPolicy: Always
+
+serviceAccount:
+  name: r2-nginx
+labels:
+  tier: front
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 80
