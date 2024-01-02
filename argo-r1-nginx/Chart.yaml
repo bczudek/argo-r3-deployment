@@ -1,0 +1,6 @@
+apiVersion: v2
+name: r1-nginx
+description: R1-nginx
+type: application
+version: 1.0.0
+appVersion: 1.12.9e4a749
