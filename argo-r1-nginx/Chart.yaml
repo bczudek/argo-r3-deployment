@@ -3,4 +3,4 @@ name: r1-nginx
 description: R1-nginx
 type: application
 version: 1.0.0
-appVersion: 1.13.ec8ebfa
+appVersion: 1.13.ba79acb
