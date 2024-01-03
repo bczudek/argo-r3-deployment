@@ -4,29 +4,16 @@ strategy:
     maxSurge: 3
     maxUnavailable: 1
 image:
-  image_registry: acrargopogwizdow.azurecr.io/
+  image_registry: acrargopogwizdow.azurecr.io
   image_repository: r2.nginx
   environment: dev-
   version_major: '1'
-<<<<<<< HEAD
-  version_minor: '0'
-  version_patch: '0'
-  pullPolicy: Always
-
-=======
   version_minor: '1'
-  version_patch: 72a1e49
+  version_patch: 4a2a1cc
   pullPolicy: Always
->>>>>>> 652dabdcc8022ba7cd3e6f9f1ee8e775a2b88d0d
 serviceAccount:
-  name: r2-nginx
-labels:
-  tier: front
+  name: sa-dev-r2-nginx
 service:
   type: ClusterIP
   port: 80
-<<<<<<< HEAD
   targetPort: 80
-=======
-  targetPort: 80
->>>>>>> 652dabdcc8022ba7cd3e6f9f1ee8e775a2b88d0d

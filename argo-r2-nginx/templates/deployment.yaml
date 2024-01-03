@@ -29,8 +29,6 @@ spec:
             - name: http
               containerPort: {{ .Values.service.targetPort }}
               protocol: TCP
-      {{- if .Values.serviceAccount }}
-      serviceAccountName: {{ .Values.serviceAccount.name }}
-      {{- end }}
+      serviceAccountName: {{ include "r2-nginx.serviceAccountName" . }}
       terminationGracePeriodSeconds: 60
       
