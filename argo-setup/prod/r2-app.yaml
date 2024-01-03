@@ -2,10 +2,10 @@ project: default
 source:
   repoURL: 'https://github.com/bczudek/argo-r3-deployment.git'
   path: argo-r2-nginx
-  targetRevision: main
+  targetRevision: prod.v1.17
   helm:
     valueFiles:
-      - environments/values-awspreprod.yaml
+      - environments/values-awsprod.yaml
 destination:
   server: 'https://kubernetes.default.svc'
   namespace: prod

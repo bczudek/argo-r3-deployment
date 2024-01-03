@@ -2,7 +2,7 @@ project: default
 source:
   repoURL: 'https://github.com/bczudek/argo-r3-deployment.git'
   path: argo-r1-nginx
-  targetRevision: argo-r1-prod-1.17
+  targetRevision: prod.v1.17
   helm:
     valueFiles:
       - environments/values-awsprod.yaml
