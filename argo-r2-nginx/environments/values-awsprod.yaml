@@ -8,9 +8,16 @@ image:
   image_repository: r2.nginx
   environment: prod-
   version_major: '1'
+<<<<<<< HEAD
   version_minor: '2'
   version_patch: 120ee88
   pullPolicy: Always
+=======
+  version_minor: '0'
+  version_patch: '0'
+  pullPolicy: Always
+
+>>>>>>> 652dabdcc8022ba7cd3e6f9f1ee8e775a2b88d0d
 serviceAccount:
   name: r2-nginx
 labels:
@@ -18,4 +25,8 @@ labels:
 service:
   type: ClusterIP
   port: 80
+<<<<<<< HEAD
   targetPort: 80
+=======
+  targetPort: 80
+>>>>>>> 652dabdcc8022ba7cd3e6f9f1ee8e775a2b88d0d

@@ -4,13 +4,14 @@ strategy:
     maxSurge: 3
     maxUnavailable: 1
 image:
-  image_registry: acrargopogwizdow.azurecr.io
+  image_registry: acrargopogwizdow.azurecr.io/
   image_repository: r1.nginx
-  environment: dev-
+  environment: prod-
   version_major: '1'
-  version_minor: '16'
-  version_patch: 9c6b326
+  version_minor: '0'
+  version_patch: '0'
   pullPolicy: Always
+
 serviceAccount:
   name: r1-nginx
 labels:
