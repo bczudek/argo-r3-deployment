@@ -13,7 +13,7 @@ image:
   pullPolicy: Always
 
 serviceAccount:
-  name: r1-nginx
+  name: sa-prod-r1-nginx
 service:
   type: ClusterIP
   port: 80

@@ -9,10 +9,10 @@ image:
   environment: dev-
   version_major: '1'
   version_minor: '16'
-  version_patch: 3d970a0
+  version_patch: cd9d25a
   pullPolicy: Always
 serviceAccount:
-  name: r1-nginx
+  name: sa-dev-r1-nginx
 service:
   type: ClusterIP
   port: 80
