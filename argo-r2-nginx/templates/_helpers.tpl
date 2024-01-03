@@ -25,8 +25,6 @@ Common labels
 {{- define "r2-nginx.labels" -}}
 {{ include "r2-nginx.selectorLabels" . }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-app.kubernetes.io/component:  {{ .Values.labels.tier }}
-app.kubernetes.io/part-of: frontend
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 helm.sh/chart: {{ .Chart.Name }}
 helm.sh/version: {{ .Chart.Version | quote }}
@@ -38,7 +36,6 @@ Selector labels
 {{- define "r2-nginx.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "r2-nginx.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
-gft.com/environment: {{ .Values.labels.environment }}
 {{- end }}
 
 {{/*

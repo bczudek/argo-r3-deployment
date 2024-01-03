@@ -13,9 +13,5 @@ spec:
       targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
-    - port: {{ .Values.service.jmx }}
-      targetPort: jmx
-      protocol: TCP
-      name: jmx
   selector:
     {{- include "r2-nginx.selectorLabels" . | nindent 4 }}
