@@ -4,17 +4,15 @@ strategy:
     maxSurge: 3
     maxUnavailable: 1
 image:
-  image_registry: acrargopogwizdow.azurecr.io/
+  image_registry: acrargopogwizdow.azurecr.io
   image_repository: r1.nginx
   environment: preprod-
   version_major: '1'
-  version_minor: '16'
-  version_patch: 29024df
+  version_minor: '17'
+  version_patch: af6a26b
   pullPolicy: Always
 serviceAccount:
-  name: r1-nginx
-labels:
-  tier: front
+  name: sa-preprod-r1-nginx
 service:
   type: ClusterIP
   port: 80
