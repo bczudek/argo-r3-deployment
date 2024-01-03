@@ -14,8 +14,6 @@ image:
 
 serviceAccount:
   name: r1-nginx
-labels:
-  tier: front
 service:
   type: ClusterIP
   port: 80

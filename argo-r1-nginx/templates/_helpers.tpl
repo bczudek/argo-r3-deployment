@@ -25,8 +25,6 @@ Common labels
 {{- define "r1-nginx.labels" -}}
 {{ include "r1-nginx.selectorLabels" . }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-app.kubernetes.io/component:  {{ .Values.labels.tier }}
-app.kubernetes.io/part-of: frontend
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 helm.sh/chart: {{ .Chart.Name }}
 helm.sh/version: {{ .Chart.Version | quote }}
