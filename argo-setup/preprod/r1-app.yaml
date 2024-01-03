@@ -1,0 +1,13 @@
+project: default
+source:
+  repoURL: 'https://github.com/bczudek/argo-r3-deployment.git'
+  path: argo-r1-nginx
+  targetRevision: main
+  helm:
+    valueFiles:
+      - environments/values-awspreprod.yaml
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: preprod
+syncPolicy:
+  automated: {}
