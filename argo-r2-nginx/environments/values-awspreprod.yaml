@@ -8,21 +8,13 @@ image:
   image_repository: r2.nginx
   environment: preprod-
   version_major: '1'
-<<<<<<< HEAD
-  version_minor: '3'
-  version_patch: 73e21f0
-=======
   version_minor: '0'
   version_patch: '0'
->>>>>>> ae1663fbf723f76a06740eeaaab494fc7e5151aa
   pullPolicy: Always
 
 serviceAccount:
   name: sa-preprod-r2-nginx
-<<<<<<< HEAD
-=======
 
->>>>>>> ae1663fbf723f76a06740eeaaab494fc7e5151aa
 service:
   type: ClusterIP
   port: 80
