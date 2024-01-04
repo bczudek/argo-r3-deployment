@@ -8,13 +8,11 @@ image:
   image_repository: r2.nginx
   environment: dev-
   version_major: '1'
-  version_minor: '0'
-  version_patch: '0'
+  version_minor: '2'
+  version_patch: 560513a
   pullPolicy: Always
-
 serviceAccount:
   name: sa-dev-r2-nginx
-
 service:
   type: ClusterIP
   port: 80

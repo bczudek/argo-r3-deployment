@@ -3,4 +3,8 @@ name: r2-nginx
 description: R2-nginx
 type: application
 version: 1.0.0
+<<<<<<< HEAD
 appVersion: 1.4.448713f
+=======
+appVersion: 1.2.560513a
+>>>>>>> 10fb87ec4606a48ffa5c1eb4cac8df0d0274c554

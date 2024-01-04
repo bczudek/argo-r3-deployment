@@ -8,10 +8,9 @@ image:
   image_repository: r1.nginx
   environment: dev-
   version_major: '1'
-  version_minor: '0'
-  version_patch: '0'
+  version_minor: '17'
+  version_patch: b700f9c
   pullPolicy: Always
-
 serviceAccount:
   name: sa-dev-r1-nginx
 service:

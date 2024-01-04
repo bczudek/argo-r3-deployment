@@ -1,0 +1,3 @@
+az group create -n rg-aks -l westeurope
+az acr create -n acrargopogwizdow -l westeurope -g rg-aks --sku basic --admin-enabled true
+az aks update -n aksargo -g rg-aks --attach-acr acrargopogwizdow
