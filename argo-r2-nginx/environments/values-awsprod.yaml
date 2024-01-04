@@ -8,8 +8,8 @@ image:
   image_repository: r2.nginx
   environment: prod-
   version_major: '1'
-  version_minor: '4'
-  version_patch: 448713f
+  version_minor: '5'
+  version_patch: 13feeed
   pullPolicy: Always
 serviceAccount:
   name: sa-prod-r2-nginx
