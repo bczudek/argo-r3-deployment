@@ -8,13 +8,8 @@ image:
   image_repository: r2.nginx
   environment: preprod-
   version_major: '1'
-<<<<<<< HEAD
-  version_minor: '4'
-  version_patch: 448713f
-=======
   version_minor: '0'
   version_patch: '0'
->>>>>>> 10fb87ec4606a48ffa5c1eb4cac8df0d0274c554
   pullPolicy: Always
 
 serviceAccount:
